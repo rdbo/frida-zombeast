@@ -1,0 +1,22 @@
+{
+  "name": "frida-zombeast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "frida-compile src/index.ts -o dist/agent.js -c",
+    "watch": "frida-compile src/index.ts -o dist/agent.js -w",
+    "spawn": "frida -U -f com.akpublish.zombie -l dist/agent.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/frida-gum": "^18.4.3",
+    "@types/node": "^20.8.0",
+    "frida-compile": "^16.3.0",
+    "frida-il2cpp-bridge": "^0.8.8",
+    "typescript": "^5.2.2"
+  }
+}
